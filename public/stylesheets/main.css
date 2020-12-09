@@ -129,33 +129,6 @@ body, html {
     letter-spacing: 4px;
 }
 
-@media only screen and (max-width: 479px){
-    .page-header-content {
-        width: 280px;
-        padding: 40px 20px;
-    }
-    .page-header-title, .post-title {
-        font-size: 19px;
-        letter-spacing: 6px;
-    }
-    .site-footer{
-        width: 280px;
-    }
-
-}
-
-
-@media only screen and (max-width: 767px){
-    .page-header {
-        height: 300px;
-    }
-    .site-footer{
-        width: 440px;
-    }
-}
-
-
-
 
 @media only screen and (max-width: 980px){
     .page-header {
@@ -170,4 +143,32 @@ body, html {
         width: 728px;
     }
     
+}
+
+
+@media only screen and (max-width: 767px){
+    .page-header {
+        height: 300px;
+    }
+    .site-footer{
+        width: 440px;
+    }
+}
+
+
+@media only screen and (max-width: 479px){
+    .page-header-content {
+        width: 280px;
+        padding: 40px 20px;
+    }
+    .page-header-title, .post-title {
+        font-size: 19px;
+        letter-spacing: 6px;
+    }
+    .site-footer{
+        width: 280px;
+    }
+    .navbar-light .navbar-brand{
+        padding-left: 3%;
+    }
 }
