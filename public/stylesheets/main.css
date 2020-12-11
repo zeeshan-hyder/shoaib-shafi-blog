@@ -53,7 +53,7 @@ body, html {
 
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform 350ms ease-in;
+    transition: transform 250ms ease-in;
 }
 
 .nav-link:hover::after{
@@ -152,6 +152,31 @@ body, html {
     letter-spacing: 4px;
 }
 
+.site-main{
+    width: 940px;
+    margin: 50px auto 0 auto;
+}
+
+.site-main::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.page-content{
+    width: 640px;
+    float: left;
+    width: 100%;
+}
+
+.page-content a{
+    text-decoration: none;
+    color: #b09a68;
+}
+
+.page-content a:hover{
+    color: #272B2F;
+}
 
 @media only screen and (max-width: 980px){
     .page-header {
@@ -162,7 +187,7 @@ body, html {
         width: 420px;
         padding: 60px 20px;
     }
-    .site-footer{
+    .site-footer, .site-main, .page-content{
         width: 728px;
     }
     
@@ -173,7 +198,7 @@ body, html {
     .page-header {
         height: 300px;
     }
-    .site-footer{
+    .site-footer, .site-main, .page-content{
         width: 440px;
     }
     .navbar-light .navbar-nav .nav-link{
@@ -197,6 +222,8 @@ body, html {
     .site-footer{
         width: 280px;
     }
-    
+    .site-main, .page-content{
+        width: 280px;
+    }
 }
 
