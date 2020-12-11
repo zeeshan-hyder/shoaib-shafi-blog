@@ -48,7 +48,7 @@ body, html {
     left: 3%;
     bottom: 0;
     width: 90%;
-    height: 2px;
+    height: 1px;
     background: currentColor;
 
     transform: scaleX(0);
