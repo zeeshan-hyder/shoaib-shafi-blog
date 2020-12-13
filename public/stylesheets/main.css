@@ -178,6 +178,14 @@ body, html {
     color: #272B2F;
 }
 
+.contact-form-title{
+    font-size: 22px;
+    color: #272B2F;
+    font-family: 'Lato', 'sans-serif';
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 @media only screen and (max-width: 980px){
     .page-header {
         height: 400px;
@@ -226,4 +234,8 @@ body, html {
         width: 280px;
     }
 }
+
+
+
+
 
