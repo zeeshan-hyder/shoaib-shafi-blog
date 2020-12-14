@@ -230,6 +230,9 @@ body, html {
     .contact-form-title{
         font-size: 16px;
     }
+    .navbar-light .navbar-nav .nav-link{
+        padding-left: 0.7rem;
+    }
 }
 
 
