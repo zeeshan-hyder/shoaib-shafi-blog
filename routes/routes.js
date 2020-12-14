@@ -1,9 +1,11 @@
+require('dotenv').config()
+
 const express = require("express");
 const router  = express.Router();
-const sgMail        = require('@sendgrid/mail');
+const sgMail  = require('@sendgrid/mail');
 const Message = require("../models/messages");
 
-sgMail.setApiKey("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");
+sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 
 router.get('/', (req,res) => {
@@ -45,25 +47,22 @@ router.post("/contact", async (req, res) => {
     let message = await new Message(messageDetails);
     await message.save();
     
-    let SenderEmail = 'shabbaralee@gmail.com';
-    let ReceiverEmail = 'thezeeshanhyder@gmail.com';
+    let SenderEmail = process.env.SENDER_EMAIL;
+    let ReceiverEmail = process.env.RECEIVER_EMAIL;
     
     // compile the mail
     const msg = {
         to: ReceiverEmail,
         from: SenderEmail, 
-        subject: 'Mail from a User - Shoaib Shafi',
+        subject: 'Shoaib Shafi, Mail From ' + req.body.name,
         text: `Name: `+req.body.name+`\n\n`+
         `Email: ` + req.body.email+`\n\n`+
         `Message: `+req.body.message +` `.replace(/    /g, ''),
     };
-
-    
-    console.log(msg);
     
     // send the mail
     await sgMail.send(msg);
-    console.log("An email has been sent");
+    console.log("contact mail sent to admin");
 
     res.redirect('/');
 });
