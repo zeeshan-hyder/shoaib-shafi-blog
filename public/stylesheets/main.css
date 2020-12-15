@@ -184,6 +184,14 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: 5px;
 }
 
+.about-text{
+    padding: 12px 0; 
+    padding-left: 60px;
+}
+
+.w3-row{
+    padding: 20px 0;
+}
 
 @media only screen and (max-width: 980px){
     .page-header {
@@ -238,8 +246,21 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-light .navbar-nav .nav-link{
         padding-left: 0.7rem;
     }
+    .about-text{
+        padding: 12px 0; 
+        
+    }
+    .about-text p{
+        padding-left: 5%;
+        padding-right: 5%;    
+    }
 }
 
+@media only screen and (max-width: 576px){
+    .col-xs-6{
+        max-width: 50%;
+    }
+}
 
 
 
