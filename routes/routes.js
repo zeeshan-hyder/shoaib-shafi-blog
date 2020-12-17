@@ -36,6 +36,13 @@ router.get('/contact', (req,res) => {
     res.render("contact",{title});
 });
 
+router.get('/thankyou', (req, res) => {
+    let title = {
+        text: "THANK YOU - Shoaib Shafi"
+    }
+    res.render("thankyou", {title});
+});
+
 router.post("/contact", async (req, res) => {
 
     let messageDetails = {
@@ -64,7 +71,7 @@ router.post("/contact", async (req, res) => {
     await sgMail.send(msg);
     console.log("contact mail sent to admin");
 
-    res.redirect('/');
+    res.redirect('/thankyou');
 });
 
 
