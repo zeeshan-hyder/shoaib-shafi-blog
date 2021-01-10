@@ -10,7 +10,7 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
 router.get('/', (req,res) => {
     let title = {
-        text: "Shoaib Shafi - Freelance Writer"
+        text: "Shoaib Shafi - Writer"
     }
     res.render("home", {title});
 });

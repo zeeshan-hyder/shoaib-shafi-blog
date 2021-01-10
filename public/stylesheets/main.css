@@ -10,7 +10,32 @@ body, html {
 }
 
 .post-content a{
-    font-family: 'Comfortaa';
+    font-family: 'Prata', serif;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    color: #194b5c; 
+    font-size: 16px;
+}
+
+.post-content a:hover{
+    color: #3e717d;
+}
+
+.published-in{
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #194b5c;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+.article-heading{
+    font-size: 24px; 
+    font-family: 'Prata', serif; 
+    font-weight: 700; 
+    letter-spacing: 3px; 
+    color: #3e717d;
 }
 
 .navbar-light .navbar-brand:hover{
@@ -24,7 +49,7 @@ body, html {
     font-size: 19px;
     letter-spacing: 9px;
     text-transform: uppercase;
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Prata', serif;
     line-height: 20px;
     padding-left: 18%;
     top: -10px;
@@ -38,7 +63,7 @@ body, html {
     font-size: 11px;
     letter-spacing: 4px;
     text-transform: uppercase;
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Prata', serif;
 }
 
 .nav-link::after{
@@ -106,9 +131,9 @@ body, html {
     margin-bottom: 0;
     font-size: 22px;
     line-height: 26px;
-    letter-spacing: 9px;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    font-family: 'Lato', 'sans-serif';   
+    font-family: 'Prata', serif;   
 }
 
 .page-header-text{
@@ -174,14 +199,7 @@ body, html {
     width: 100%;
 }
 
-.page-content a{
-    text-decoration: none;
-    color: #b09a68;
-}
 
-.page-content a:hover{
-    color: #272B2F;
-}
 
 .contact-form-title{
     font-size: 22px;
@@ -191,18 +209,25 @@ body, html {
     letter-spacing: 1px;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    font-family: "Playfair Display";
-    letter-spacing: 5px;
-}
 
 .about-text{
     padding: 12px 5%; 
     padding-left: 10%;
 }
 
-.w3-row{
-    padding: 20px 0;
+
+.about-text h1{
+    text-align: center;
+    font-family: 'Karla', sans-serif;
+    letter-spacing: 10px;
+}
+
+.about-text p{
+    text-align: left;
+    font-family: 'Karla', sans-serif;
+    margin: auto 15% auto 15%;
+    letter-spacing: 1px;
+    font-size: 22px;
 }
 
 @media only screen and (max-width: 980px){
@@ -258,17 +283,28 @@ h1, h2, h3, h4, h5, h6 {
     .navbar-light .navbar-nav .nav-link{
         padding-left: 0.7rem;
     }
+    
     .about-text{
-        padding: 12px 0; 
-        
-    }
-    .about-text p{
         padding-left: 5%;
         padding-right: 5%;    
     }
     .navbar-light .navbar-brand{
         font-size: 17px;
         margin-right: 0;
+    }
+    .site-main{
+        margin: 50px auto 0 20px;
+    }
+    .article-heading{
+        font-size: 22px;
+    }
+    .about-text h1{
+        text-align: left;
+        font-family: 'Prata', serif;
+        letter-spacing: 5px;
+    }
+    .about-text p{
+        margin: 0;
     }
 }
 
