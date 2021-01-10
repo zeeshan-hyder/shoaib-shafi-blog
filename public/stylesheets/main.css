@@ -202,13 +202,22 @@ body, html {
 
 
 .contact-form-title{
-    font-size: 22px;
+    font-size: 20px;
     color: #272B2F;
-    font-family: 'Lato', 'sans-serif';
+    font-family: 'Prata', serif;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
 }
 
+label{
+    color: #272B2F;
+    font-family: 'Prata', serif;
+}
+
+button{
+    color: #272B2F;
+    font-family: 'Prata', serif;
+}
 
 .about-text{
     padding: 12px 5%; 
@@ -300,7 +309,7 @@ body, html {
     }
     .about-text h1{
         text-align: left;
-        font-family: 'Prata', serif;
+        font-family: 'Karla', sans-serif;
         letter-spacing: 5px;
     }
     .about-text p{
