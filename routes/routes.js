@@ -29,6 +29,13 @@ router.get('/articles', (req, res) => {
     res.render("articles", {title});
 });
 
+router.get('/articles/pdf', (req, res) => {
+    let title = {
+        text: "pdf - Shoaib Shafi"
+    }
+    res.render("pdfDisplay", {title});
+})
+
 router.get('/contact', (req,res) => {
     let title = {
         text: "CONTACT - Shoaib Shafi"
