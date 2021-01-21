@@ -69,16 +69,21 @@ router.post("/contact", async (req, res) => {
         to: ReceiverEmail,
         from: SenderEmail, 
         subject: 'Shoaib Shafi, Mail From ' + req.body.name,
-        text: `Name: `+req.body.name+`\n\n`+
-        `Email: ` + req.body.email+`\n\n`+
-        `Message: `+req.body.message +` `.replace(/    /g, ''),
+        text: req.body.message +` `.replace(/    /g, '') + `\n\n` +
+        req.body.name + `\n` +
+        req.body.email + `\n`
     };
     
     // send the mail
-    await sgMail.send(msg);
-    console.log("contact mail sent to admin");
-
-    res.redirect('/thankyou');
+    sgMail.send(msg)
+    .then(msgresponse => {
+        console.log("contact mail sent to admin");
+        res.redirect('/thankyou');
+    })
+    .catch(error => {
+        console.log("error in sending the email");
+        res.send("Cannot send message");
+    })  
 });
 
 
